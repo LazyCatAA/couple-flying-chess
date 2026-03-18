@@ -96,7 +96,11 @@ export function GameView({
   return (
     <div className="fixed inset-0 z-50 bg-black flex flex-col">
       <div className="absolute inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-br from-gray-900 via-black to-gray-900 opacity-60" />
+        <div className="absolute inset-0 bg-gradient-to-br from-pink-500 via-purple-600 via-indigo-500 to-blue-600 animate-gradient-xy" />
+        <div className="absolute top-1/4 -left-20 w-60 h-60 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" />
+        <div className="absolute top-1/3 -right-20 w-60 h-60 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000" />
+        <div className="absolute -bottom-20 left-1/3 w-60 h-60 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000" />
+        <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
         <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
       </div>
 

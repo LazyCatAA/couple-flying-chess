@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { Github } from 'lucide-react';
 import { useGameState } from './hooks/useGameState';
 import { TaskEventData } from './types';
 import { HomeView } from './components/views/HomeView';
@@ -94,35 +93,25 @@ function App() {
 
   return (
     <div className="h-screen w-screen overflow-hidden flex justify-center bg-black">
-      <div className="fixed inset-0 z-0">
-        <div className="w-full h-full bg-gradient-to-br from-gray-900 via-black to-gray-900 opacity-60" />
-        <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
+      <div className="fixed inset-0 z-0 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-pink-500 via-purple-600 via-indigo-500 to-blue-600 animate-gradient-xy" />
+        <div className="absolute top-1/4 -left-20 w-60 h-60 bg-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" />
+        <div className="absolute top-1/3 -right-20 w-60 h-60 bg-purple-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000" />
+        <div className="absolute -bottom-20 left-1/3 w-60 h-60 bg-indigo-400 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-4000" />
+        <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" />
       </div>
 
       <div className="relative z-10 w-full max-w-[430px] h-full flex flex-col bg-black/20">
-        <header className="pt-12 pb-2 px-6 shrink-0 flex justify-between items-start">
-          <div>
-            <div className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-1">
-              Couple's Game
+        <header className="pt-12 pb-4 px-6 shrink-0 flex justify-center items-center">
+          <div className="flex items-center gap-3">
+            <span className="text-2xl">💕</span>
+            <div>
+              <div className="text-[11px] font-semibold text-gray-400 uppercase tracking-widest mb-1 text-center">
+                Couple's Game
+              </div>
+              <h1 className="text-3xl font-bold text-white tracking-tight text-center">情侣飞行棋</h1>
             </div>
-            <h1 className="text-3xl font-bold text-white tracking-tight">情侣飞行棋</h1>
-          </div>
-          <div className="flex flex-col items-end gap-2 mt-1">
-            <a
-              href="https://github.com/woniu9524/couple-flying-chess"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
-              title="GitHub Repository"
-            >
-              <Github size={24} />
-            </a>
-            <a
-              href="mailto:ikun@gmx.cn"
-              className="text-xs text-gray-500 hover:text-gray-300 transition-colors"
-            >
-              问题反馈：ikun@gmx.cn
-            </a>
+            <span className="text-2xl">💕</span>
           </div>
         </header>
 
