@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  couple-flying-chess:
+    image: nginx:alpine
+    container_name: couple-flying-chess
+    ports:
+      - "8888:80"
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+    restart: unless-stopped
